@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.example;
+package com.hivemq;
 
 import com.hivemq.extension.sdk.api.ExtensionMain;
 import com.hivemq.extension.sdk.api.annotations.NotNull;
