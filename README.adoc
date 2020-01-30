@@ -7,7 +7,7 @@
 
 == HiveMQ No Auth Extension
 
-*Type*: Demonstration Extension
+*Type*: Security
 
 *Version*: 1.0.0
 
