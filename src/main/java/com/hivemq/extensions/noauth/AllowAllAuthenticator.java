@@ -1,4 +1,3 @@
-
 /*
  * Copyright 2020 dc-square GmbH
  *
@@ -15,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.hivemq;
+package com.hivemq.extensions.noauth;
 
 import com.hivemq.extension.sdk.api.annotations.NotNull;
 import com.hivemq.extension.sdk.api.auth.SimpleAuthenticator;
@@ -26,8 +25,9 @@ import com.hivemq.extension.sdk.api.auth.parameter.SimpleAuthOutput;
  * @author Lukas Brandl
  */
 public class AllowAllAuthenticator implements SimpleAuthenticator {
+
     @Override
-    public void onConnect(@NotNull final SimpleAuthInput simpleAuthInput, @NotNull final SimpleAuthOutput simpleAuthOutput) {
+    public void onConnect(final @NotNull SimpleAuthInput simpleAuthInput, final @NotNull SimpleAuthOutput simpleAuthOutput) {
         simpleAuthOutput.authenticateSuccessfully();
     }
 }

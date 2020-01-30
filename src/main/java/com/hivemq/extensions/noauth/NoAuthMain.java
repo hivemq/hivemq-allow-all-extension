@@ -1,4 +1,3 @@
-
 /*
  * Copyright 2020 dc-square GmbH
  *
@@ -15,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.hivemq;
+package com.hivemq.extensions.noauth;
 
 import com.hivemq.extension.sdk.api.ExtensionMain;
 import com.hivemq.extension.sdk.api.annotations.NotNull;
@@ -34,29 +33,25 @@ import org.slf4j.LoggerFactory;
 public class NoAuthMain implements ExtensionMain {
 
     private static final @NotNull Logger log = LoggerFactory.getLogger(NoAuthMain.class);
-    public static final SimpleAuthenticator ALLOW_ALL_AUTHENTICATOR = new AllowAllAuthenticator();
+    private static final @NotNull SimpleAuthenticator ALLOW_ALL_AUTHENTICATOR = new AllowAllAuthenticator();
 
     @Override
     public void extensionStart(final @NotNull ExtensionStartInput extensionStartInput, final @NotNull ExtensionStartOutput extensionStartOutput) {
 
         try {
-            Services.securityRegistry().setAuthenticatorProvider(authenticatorProviderInput -> ALLOW_ALL_AUTHENTICATOR);
             log.warn("\n#####################################################################################################" +
                     "\n# This is an insecure deployment. Every MQTT client is fully authorized.                            #" +
                     "\n# For production usage add an authentication extension and remove the no-auth extension.            #" +
                     "\n# Authentication extensions can be found in the marketplace (https://www.hivemq.com/extensions/).   #" +
                     "\n#####################################################################################################");
+            Services.securityRegistry().setAuthenticatorProvider(authenticatorProviderInput -> ALLOW_ALL_AUTHENTICATOR);
 
-
-        } catch (Exception e) {
+        } catch (final Exception e) {
             log.error("Exception thrown at extension start: ", e);
         }
-
     }
 
     @Override
     public void extensionStop(final @NotNull ExtensionStopInput extensionStopInput, final @NotNull ExtensionStopOutput extensionStopOutput) {
-
     }
-
 }
