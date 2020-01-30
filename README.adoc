@@ -17,7 +17,7 @@
 
 This Extension allows all MQTT clients to connect to HiveMQ.
 Using this extension is not secure.
-For production usage add an authentication extension and remove the no-auth extension.
+For production usage add an authentication extension and remove the hivemq-no-auth extension.
 Authentication extensions can be found in the marketplace (https://www.hivemq.com/extensions/).
 
 === Installation

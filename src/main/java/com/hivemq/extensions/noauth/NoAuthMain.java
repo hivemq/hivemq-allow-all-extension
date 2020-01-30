@@ -41,7 +41,7 @@ public class NoAuthMain implements ExtensionMain {
         try {
             log.warn("\n#####################################################################################################" +
                     "\n# This is an insecure deployment. Every MQTT client is fully authorized.                            #" +
-                    "\n# For production usage add an authentication extension and remove the no-auth extension.            #" +
+                    "\n# For production usage add an authentication extension and remove the hivemq-no-auth extension.     #" +
                     "\n# Authentication extensions can be found in the marketplace (https://www.hivemq.com/extensions/).   #" +
                     "\n#####################################################################################################");
             Services.securityRegistry().setAuthenticatorProvider(authenticatorProviderInput -> ALLOW_ALL_AUTHENTICATOR);
