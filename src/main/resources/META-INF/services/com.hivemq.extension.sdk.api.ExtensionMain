@@ -1,1 +1,1 @@
-com.hivemq.extensions.noauth.NoAuthMain
+com.hivemq.extensions.allowall.AllowAllMain

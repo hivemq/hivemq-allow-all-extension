@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.hivemq.extensions.noauth;
+package com.hivemq.extensions.allowall;
 
 import com.hivemq.extension.sdk.api.ExtensionMain;
 import com.hivemq.extension.sdk.api.annotations.NotNull;
@@ -30,9 +30,9 @@ import org.slf4j.LoggerFactory;
 /**
  * @author Lukas Brandl
  */
-public class NoAuthMain implements ExtensionMain {
+public class AllowAllMain implements ExtensionMain {
 
-    private static final @NotNull Logger log = LoggerFactory.getLogger(NoAuthMain.class);
+    private static final @NotNull Logger log = LoggerFactory.getLogger(AllowAllMain.class);
     private static final @NotNull SimpleAuthenticator ALLOW_ALL_AUTHENTICATOR = new AllowAllAuthenticator();
 
     @Override

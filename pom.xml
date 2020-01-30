@@ -20,13 +20,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.hivemq</groupId>
-    <artifactId>hivemq-no-auth-extension</artifactId>
+    <artifactId>hivemq-allow-all-extension</artifactId>
     <version>1.0.0</version>
 
-    <description>HiveMQ No Authentication Extension - all MQTT clients are authorized</description>
+    <description>HiveMQ Allow All Extension - all MQTT clients are authorized</description>
 
     <properties>
-        <extension.name>No Authentication Extension</extension.name>
+        <extension.name>Allow All Extension</extension.name>
         <extension.author>HiveMQ</extension.author>
         <asciidoctor.version>1.5.2.1</asciidoctor.version>
         <output.dir>${basedir}</output.dir>

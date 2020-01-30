@@ -5,7 +5,7 @@
 :maven-documentation-profile-link: http://maven.apache.org/guides/introduction/introduction-to-profiles.html
 :hivemq-support: http://www.hivemq.com/support/
 
-== HiveMQ No Auth Extension
+== HiveMQ Allow All Extension
 
 *Type*: Security
 
