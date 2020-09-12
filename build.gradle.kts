@@ -9,10 +9,10 @@ description = "HiveMQ Allow All Extension - all MQTT clients are authorized"
 hivemqExtension {
     name = "Allow All Extension"
     author = "HiveMQ"
-    mainClass = "com.hivemq.extensions.allowall.AllowAllMain"
-    sdkVersion = "${property("hivemq-extension-sdk.version")}"
     priority = 0
     startPriority = 0
+    mainClass = "com.hivemq.extensions.allowall.AllowAllMain"
+    sdkVersion = "${property("hivemq-extension-sdk.version")}"
 }
 
 tasks.hivemqExtensionResources {
