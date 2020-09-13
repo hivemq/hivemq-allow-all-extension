@@ -21,7 +21,7 @@ tasks.hivemqExtensionResources {
     from(tasks.asciidoctor)
 }
 
-val prepareAsciidocTask = tasks.register<Copy>("prepareAsciidoc") {
+val prepareAsciidocTask = tasks.register<Sync>("prepareAsciidoc") {
     from("README.adoc").into(buildDir.resolve("tmp/asciidoc"))
 }
 tasks.asciidoctor {
