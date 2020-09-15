@@ -1,5 +1,5 @@
 plugins {
-    id("com.hivemq.hivemq-extension-plugin")
+    id("com.hivemq.extension")
     id("org.asciidoctor.jvm.convert")
 }
 

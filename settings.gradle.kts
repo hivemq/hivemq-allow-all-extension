@@ -5,7 +5,7 @@ pluginManagement {
     }
 
     plugins {
-        id("com.hivemq.hivemq-extension-plugin") version "${extra["plugin.hivemq-extension.version"]}"
+        id("com.hivemq.extension") version "${extra["plugin.hivemq-extension.version"]}"
         id("org.asciidoctor.jvm.convert") version "${extra["plugin.asciidoctor.version"]}"
     }
 }
