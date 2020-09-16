@@ -1,8 +1,4 @@
 pluginManagement {
-    repositories {
-        gradlePluginPortal()
-    }
-
     plugins {
         id("com.hivemq.extension") version "${extra["plugin.hivemq-extension.version"]}"
         id("org.asciidoctor.jvm.convert") version "${extra["plugin.asciidoctor.version"]}"
