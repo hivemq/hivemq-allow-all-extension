@@ -11,7 +11,6 @@ hivemqExtension {
     author = "HiveMQ"
     priority = 0
     startPriority = 0
-    mainClass = "com.hivemq.extensions.allowall.AllowAllMain"
     sdkVersion = "${property("hivemq-extension-sdk.version")}"
 }
 
