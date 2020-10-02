@@ -27,13 +27,3 @@ tasks.asciidoctor {
     dependsOn(prepareAsciidocTask)
     sourceDir(prepareAsciidocTask.get().outputs.files.asPath)
 }
-
-tasks.prepareHivemqHome {
-    hivemqFolder.set("/Users/sgiebl/Projects/hivemq-4/test-hivemq/hivemq-4.4.1")
-}
-
-tasks.runHivemqWithExtension {
-    debugOptions {
-        enabled.set(true)
-    }
-}
