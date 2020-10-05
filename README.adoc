@@ -1,6 +1,7 @@
-:hivemq-link: http://www.hivemq.com
-:hivemq-extension-docs-link: http://www.hivemq.com/docs/extensions/latest/
-:hivemq-support: http://www.hivemq.com/support/
+:hivemq-link: https://www.hivemq.com
+:hivemq-extension-docs-link: {hivemq-link}/docs/hivemq/latest/extensions/
+:hivemq-marketplace: {hivemq-link}/extensions/
+:hivemq-support: {hivemq-link}/support/
 
 == HiveMQ Allow All Extension
 
@@ -15,7 +16,7 @@
 This Extension allows all MQTT clients to connect to HiveMQ.
 Using this extension is not secure.
 For production usage, add an appropriate security extension and remove the hivemq-allow-all extension.
-You can download security extensions from the HiveMQ Marketplace (https://www.hivemq.com/extensions/).
+You can download security extensions from the {hivemq-marketplace}[HiveMQ Marketplace].
 
 === Need help?
 
