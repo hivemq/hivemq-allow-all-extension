@@ -3,7 +3,7 @@
 :hivemq-marketplace: {hivemq-link}/extensions/
 :hivemq-support: {hivemq-link}/support/
 
-== HiveMQ Allow All Extension
+= HiveMQ Allow All Extension
 
 *Type*: Security
 
@@ -11,14 +11,14 @@
 
 *License*: Apache License Version 2.0
 
-=== Purpose
+== Purpose
 
 This Extension allows all MQTT clients to connect to HiveMQ.
 Using this extension is not secure.
 For production usage, add an appropriate security extension and remove the hivemq-allow-all extension.
 You can download security extensions from the {hivemq-marketplace}[HiveMQ Marketplace].
 
-=== Need help?
+== Need help?
 
 If you encounter any problems, we are happy to help.
 The best place to get in contact is our {hivemq-support}[support].
