@@ -27,7 +27,7 @@ import com.hivemq.extension.sdk.api.auth.parameter.SimpleAuthOutput;
 public class AllowAllAuthenticator implements SimpleAuthenticator {
 
     @Override
-    public void onConnect(final @NotNull SimpleAuthInput simpleAuthInput, final @NotNull SimpleAuthOutput simpleAuthOutput) {
-        simpleAuthOutput.authenticateSuccessfully();
+    public void onConnect(final @NotNull SimpleAuthInput input, final @NotNull SimpleAuthOutput output) {
+        output.authenticateSuccessfully();
     }
 }
