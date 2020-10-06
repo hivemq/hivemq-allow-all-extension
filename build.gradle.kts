@@ -1,5 +1,6 @@
 plugins {
     id("com.hivemq.extension")
+    id("com.github.hierynomus.license")
     id("org.asciidoctor.jvm.convert")
 }
 
@@ -26,4 +27,9 @@ val prepareAsciidocTask = tasks.register<Sync>("prepareAsciidoc") {
 tasks.asciidoctor {
     dependsOn(prepareAsciidocTask)
     sourceDir(prepareAsciidocTask.get().outputs.files.asPath)
+}
+
+license {
+    header = rootDir.resolve("HEADER")
+    mapping("java", "SLASHSTAR_STYLE")
 }
