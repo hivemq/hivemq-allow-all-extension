@@ -3,7 +3,7 @@ plugins {
     id("org.asciidoctor.jvm.convert")
 }
 
-group = "com.hivemq"
+group = "com.hivemq.extensions"
 description = "HiveMQ Allow All Extension - all MQTT clients are authorized"
 
 hivemqExtension {
