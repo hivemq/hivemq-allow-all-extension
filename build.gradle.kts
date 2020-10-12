@@ -15,12 +15,6 @@ hivemqExtension {
     sdkVersion = "${property("hivemq-extension-sdk.version")}"
 }
 
-tasks.hivemqExtensionResources {
-    from("LICENSE")
-    from("README.adoc") { rename { "README.txt" } }
-    from(tasks.asciidoctor)
-}
-
 val prepareAsciidoc by tasks.registering(Sync::class) {
     from("README.adoc").into({ temporaryDir })
 }
@@ -28,6 +22,12 @@ val prepareAsciidoc by tasks.registering(Sync::class) {
 tasks.asciidoctor {
     dependsOn(prepareAsciidoc)
     sourceDir(prepareAsciidoc.map { it.destinationDir })
+}
+
+tasks.hivemqExtensionResources {
+    from("LICENSE")
+    from("README.adoc") { rename { "README.txt" } }
+    from(tasks.asciidoctor)
 }
 
 license {
