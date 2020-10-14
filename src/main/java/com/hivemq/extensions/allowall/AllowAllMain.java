@@ -1,11 +1,11 @@
 /*
- * Copyright 2020 dc-square GmbH
+ * Copyright 2020-present HiveMQ GmbH
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *       http://www.apache.org/licenses/LICENSE-2.0
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -36,15 +36,15 @@ public class AllowAllMain implements ExtensionMain {
     private static final @NotNull SimpleAuthenticator ALLOW_ALL_AUTHENTICATOR = new AllowAllAuthenticator();
 
     @Override
-    public void extensionStart(final @NotNull ExtensionStartInput extensionStartInput, final @NotNull ExtensionStartOutput extensionStartOutput) {
-
+    public void extensionStart(final @NotNull ExtensionStartInput input, final @NotNull ExtensionStartOutput output) {
         try {
-            log.warn("\n################################################################################################################" +
-                    "\n# This HiveMQ deployment is not secure! You are lacking Authentication and Authorization.                      #" +
-                    "\n# Right now any MQTT client can connect to the broker with a full set of permissions.                          #" +
-                    "\n# For production usage, add an appropriate security extension and remove the hivemq-allow-all extension.       #" +
-                    "\n# You can download security extensions from the HiveMQ Marketplace (https://www.hivemq.com/extensions/).       #" +
-                    "\n################################################################################################################");
+            log.warn(
+                    "\n################################################################################################################" +
+                            "\n# This HiveMQ deployment is not secure! You are lacking Authentication and Authorization.                      #" +
+                            "\n# Right now any MQTT client can connect to the broker with a full set of permissions.                          #" +
+                            "\n# For production usage, add an appropriate security extension and remove the hivemq-allow-all extension.       #" +
+                            "\n# You can download security extensions from the HiveMQ Marketplace (https://www.hivemq.com/extensions/).       #" +
+                            "\n################################################################################################################");
             Services.securityRegistry().setAuthenticatorProvider(authenticatorProviderInput -> ALLOW_ALL_AUTHENTICATOR);
 
         } catch (final Exception e) {
@@ -53,6 +53,5 @@ public class AllowAllMain implements ExtensionMain {
     }
 
     @Override
-    public void extensionStop(final @NotNull ExtensionStopInput extensionStopInput, final @NotNull ExtensionStopOutput extensionStopOutput) {
-    }
+    public void extensionStop(final @NotNull ExtensionStopInput input, final @NotNull ExtensionStopOutput output) {}
 }
