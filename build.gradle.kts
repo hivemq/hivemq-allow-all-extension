@@ -9,11 +9,11 @@ group = "com.hivemq.extensions"
 description = "HiveMQ Allow All Extension - all MQTT clients are authorized"
 
 hivemqExtension {
-    name = "Allow All Extension"
-    author = "HiveMQ"
-    priority = 0
-    startPriority = 0
-    sdkVersion = "${property("hivemq-extension-sdk.version")}"
+    name.set("Allow All Extension")
+    author.set("HiveMQ")
+    priority.set(0)
+    startPriority.set(0)
+    sdkVersion.set("${property("hivemq-extension-sdk.version")}")
 }
 
 val prepareAsciidoc by tasks.registering(Sync::class) {
@@ -25,7 +25,7 @@ tasks.asciidoctor {
     sourceDir(prepareAsciidoc.map { it.destinationDir })
 }
 
-tasks.hivemqExtensionResources {
+hivemqExtension.resources {
     from("LICENSE")
     from("README.adoc") { rename { "README.txt" } }
     from(tasks.asciidoctor)
