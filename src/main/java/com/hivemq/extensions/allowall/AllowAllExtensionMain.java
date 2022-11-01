@@ -53,5 +53,6 @@ public class AllowAllExtensionMain implements ExtensionMain {
     }
 
     @Override
-    public void extensionStop(final @NotNull ExtensionStopInput input, final @NotNull ExtensionStopOutput output) {}
+    public void extensionStop(final @NotNull ExtensionStopInput input, final @NotNull ExtensionStopOutput output) {
+    }
 }
