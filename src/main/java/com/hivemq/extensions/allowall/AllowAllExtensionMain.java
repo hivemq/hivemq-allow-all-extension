@@ -30,9 +30,9 @@ import org.slf4j.LoggerFactory;
 /**
  * @author Lukas Brandl
  */
-public class AllowAllMain implements ExtensionMain {
+public class AllowAllExtensionMain implements ExtensionMain {
 
-    private static final @NotNull Logger log = LoggerFactory.getLogger(AllowAllMain.class);
+    private static final @NotNull Logger log = LoggerFactory.getLogger(AllowAllExtensionMain.class);
     private static final @NotNull SimpleAuthenticator ALLOW_ALL_AUTHENTICATOR = new AllowAllAuthenticator();
 
     @Override
