@@ -8,11 +8,11 @@ group = "com.hivemq.extensions"
 description = "HiveMQ Allow All Extension - all MQTT clients are authorized"
 
 hivemqExtension {
-    name.set("Allow All Extension")
-    author.set("HiveMQ")
-    priority.set(0)
-    startPriority.set(0)
-    sdkVersion.set(libs.versions.hivemq.extensionSdk)
+    name = "Allow All Extension"
+    author = "HiveMQ"
+    priority = 0
+    startPriority = 0
+    sdkVersion = libs.versions.hivemq.extensionSdk
 
     resources {
         from("LICENSE")
