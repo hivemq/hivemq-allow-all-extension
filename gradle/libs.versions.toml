@@ -1,5 +1,9 @@
 [versions]
 hivemq-extensionSdk = "4.0.0"
+jetbrains-annotations = "24.1.0"
+
+[libraries]
+jetbrains-annotations = { module = "org.jetbrains:annotations", version.ref = "jetbrains-annotations" }
 
 [plugins]
 hivemq-extension = { id = "com.hivemq.extension", version = "3.1.0" }
