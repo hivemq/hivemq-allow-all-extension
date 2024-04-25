@@ -16,10 +16,10 @@
 
 package com.hivemq.extensions.allowall;
 
-import com.hivemq.extension.sdk.api.annotations.NotNull;
 import com.hivemq.extension.sdk.api.auth.SimpleAuthenticator;
 import com.hivemq.extension.sdk.api.auth.parameter.SimpleAuthInput;
 import com.hivemq.extension.sdk.api.auth.parameter.SimpleAuthOutput;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * @author Lukas Brandl

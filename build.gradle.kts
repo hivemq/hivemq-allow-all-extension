@@ -19,6 +19,10 @@ hivemqExtension {
     }
 }
 
+dependencies {
+    compileOnly(libs.jetbrains.annotations)
+}
+
 license {
     header = rootDir.resolve("HEADER")
     mapping("java", "SLASHSTAR_STYLE")
