@@ -30,6 +30,7 @@ import org.slf4j.LoggerFactory;
 /**
  * @author Lukas Brandl
  */
+@SuppressWarnings("unused")
 public class AllowAllExtensionMain implements ExtensionMain {
 
     private static final @NotNull Logger log = LoggerFactory.getLogger(AllowAllExtensionMain.class);
