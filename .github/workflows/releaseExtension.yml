@@ -19,6 +19,10 @@ jobs:
         uses: gradle/actions/setup-gradle@4d9f0ba0025fe599b4ebab900eb7f3a1d93ef4c2 # v5
       - name: Build Zip
         run: ./gradlew hivemqExtensionZip
+      - name: Generate SHA256 checksum
+        run: |
+          cd build/hivemq-extension
+          sha256sum hivemq-allow-all-extension-${{ github.event.release.name }}.zip | cut -d' ' -f1 > hivemq-allow-all-extension-${{ github.event.release.name }}.sha256
       - name: Upload Release Asset
         uses: actions/upload-release-asset@e8f9f06c4b078e705bd2ea027f0926603fc9b4d5 # v1
         env:
