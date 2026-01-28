@@ -45,7 +45,7 @@ jobs:
       - name: Run Snyk monitor
         run: >
           snyk monitor --configuration-matching=^runtimeClasspath$ --target-reference=${{ steps.select_github_ref.outputs.selected_github_ref }}
-          --org=hivemq-os-extensions --project-name=hivemq-allow-all-extension --remote-repo-url=https://github.com/hivemq/hivemq-allow-all-extension
+          --org=hivemq-os-extensions --project-name=hivemq-allow-all-extension --remote-repo-url=hivemq-allow-all-extension
           --project-lifecycle=development -d hivemq-allow-all-extension
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
