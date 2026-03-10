@@ -33,13 +33,13 @@ import org.slf4j.LoggerFactory;
 @SuppressWarnings("unused")
 public class AllowAllExtensionMain implements ExtensionMain {
 
-    private static final @NotNull Logger LOG = LoggerFactory.getLogger(AllowAllExtensionMain.class);
+    private static final @NotNull Logger log = LoggerFactory.getLogger(AllowAllExtensionMain.class);
     private static final @NotNull SimpleAuthenticator ALLOW_ALL_AUTHENTICATOR = new AllowAllAuthenticator();
 
     @Override
     public void extensionStart(final @NotNull ExtensionStartInput input, final @NotNull ExtensionStartOutput output) {
         try {
-            LOG.warn(
+            log.warn(
                     "\n################################################################################################################" +
                             "\n# This HiveMQ deployment is not secure! You are lacking Authentication and Authorization.                      #" +
                             "\n# Right now any MQTT client can connect to the broker with a full set of permissions.                          #" +
@@ -48,7 +48,7 @@ public class AllowAllExtensionMain implements ExtensionMain {
                             "\n################################################################################################################");
             Services.securityRegistry().setAuthenticatorProvider(authenticatorProviderInput -> ALLOW_ALL_AUTHENTICATOR);
         } catch (final Exception e) {
-            LOG.error("Exception thrown at extension start: ", e);
+            log.error("Exception thrown at extension start: ", e);
         }
     }
 
